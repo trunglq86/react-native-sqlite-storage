@@ -332,7 +332,7 @@ public class SQLitePlugin extends ReactContextBaseJavaModule {
                     assetFilePath = assetFilePath.startsWith("/") ? assetFilePath.substring(1) : assetFilePath;
 
                     try {
-                        File assetFile = new File(filesDir, assetFilePath);
+                        File assetFile = new File(assetFilePath);
                         in = new FileInputStream(assetFile);
                         FLog.v(TAG, "Pre-populated DB asset FOUND in Files subdirectory: " + assetFile.getCanonicalPath());
                         if (openFlags == SQLiteOpenFlags.READONLY) {
